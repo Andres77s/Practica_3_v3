@@ -1,0 +1,27 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.andresvanegas.practica3.PizzasFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/pizzas"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PIZZAS"
+        android:textSize="50dp"
+        android:textStyle="bold|italic"
+        android:textColor="#d02e37" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:background="@drawable/piz"
+        android:id="@+id/tomar2"
+        android:layout_gravity="center_horizontal|bottom" />
+
+</FrameLayout>

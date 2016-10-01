@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.andresvanegas.practica3.LogginActivity"
+    android:background="@drawable/m1">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/imageView"
+        android:background="@drawable/pastizzerialo"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/eusuario"
+        android:textColor="#ffffff"
+        android:hint="Usuario"
+        android:textColorHint="@color/white"
+        android:textAlignment="center"
+        android:layout_above="@+id/econtrasena"
+        android:layout_alignEnd="@+id/econtrasena"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/econtrasena"
+        android:textColorHint="@color/white"
+        android:hint="contraseña"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:inputType="textPassword"
+        android:layout_above="@+id/bingresar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Ingresar"
+        android:id="@+id/bingresar"
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/bregistrar" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        android:textColor="@color/white"
+        android:id="@+id/bregistrar"
+        android:layout_alignTop="@+id/bingresar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="39dp" />
+
+</RelativeLayout>
