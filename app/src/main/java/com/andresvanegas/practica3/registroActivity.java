@@ -1,6 +1,8 @@
 package com.andresvanegas.practica3;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +15,7 @@ public class registroActivity extends AppCompatActivity {
 
     Button rcancelar,raceptar;
     EditText usuario,contra,rcontra,email;
+    private String scontra, scorreo;
 
 
 
@@ -52,6 +55,9 @@ public class registroActivity extends AppCompatActivity {
                     intent.putExtra("usuario",usuario.getText().toString());
                     intent.putExtra("contrasena",contra.getText().toString());
                     intent.putExtra("correo", email.getText().toString());
+                    SavePreferences("usuario",usuario.getText().toString());
+                    SavePreferences("contrasena",contra.getText().toString());
+                    SavePreferences("correo",email.getText().toString());
                     setResult(RESULT_OK,intent);
                     finish();
                 }
@@ -71,6 +77,13 @@ public class registroActivity extends AppCompatActivity {
             }
         });
     }
+    private void SavePreferences(String key, String value){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(key, value);
+        editor.commit();
+
+    }
 
 }

@@ -5,9 +5,13 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class InfoPromo extends AppCompatActivity {
+    Button volver;
+    String ur,cr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,10 +19,24 @@ public class InfoPromo extends AppCompatActivity {
         setContentView(R.layout.activity_info_promo);
 
 
+        volver = (Button) findViewById(R.id.volver);
+        volver.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent1 = new Intent(InfoPromo.this, MainActivity.class);
+               // intent1.putExtra("usuario",ur);
+                //intent1.putExtra("correo",cr);
+                startActivity(intent1);
+                finish();
+            }
+        });
+
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
         String datoNombre = (String) extras.get("nombre");//Obtengo el nombre
+
 
         switch (datoNombre){
             case "Pastas":
@@ -73,7 +91,10 @@ public class InfoPromo extends AppCompatActivity {
         else {
             Toast.makeText(this, "Iniciar screen de detalle para: \n"+ datoNombre, Toast.LENGTH_SHORT).show();
         }
+
 */
+
     }
+
 }
 

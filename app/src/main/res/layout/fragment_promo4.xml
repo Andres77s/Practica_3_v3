@@ -10,11 +10,13 @@
         android:background="@drawable/lensalada"
         android:layout_gravity="center" />
 
-    <Button
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button4"
-        android:layout_gravity="right|bottom" />
+        android:text="Promocion en ensaladas valida los dias jueves en la sede de la mota"
+        android:textSize="30dp"
+        android:layout_gravity="center_horizontal|top"
+        android:textStyle="bold|italic"
+        android:textColor="@color/red"/>
 
 </FrameLayout>

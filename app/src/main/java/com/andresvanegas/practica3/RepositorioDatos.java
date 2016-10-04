@@ -15,11 +15,11 @@ public class RepositorioDatos {
     }
 
     private RepositorioDatos() {
-        saveLead(new DatoPromo("Pastas", "CEO", "Insures S.O.", R.drawable.lpasta));
-        saveLead(new DatoPromo("Pizzas", "Asistente", "Hospital Blue", R.drawable.lpizzas));
-        saveLead(new DatoPromo("mixtos", "Directora de Marketing", "Electrical Parts ltd", R.drawable.lmixtos));
-        saveLead(new DatoPromo("ensaladas", "Diseñadora de Producto", "Creativa App", R.drawable.lensalada));
-        saveLead(new DatoPromo("licores", "Supervisor de Ventas", "Neumáticos Press", R.drawable.llicores));
+        saveLead(new DatoPromo("Pastas", "Sede: La mota", "Disponible el dia lunes.", R.drawable.lpasta));
+        saveLead(new DatoPromo("Pizzas", "Sede: Laureles", "Disponible el dia martes", R.drawable.lpizzas));
+        saveLead(new DatoPromo("mixtos", "Sede: Llanogrande", "Disponible el dia miercoles", R.drawable.lmixtos));
+        saveLead(new DatoPromo("ensaladas", "Sede: La mota", "Disponible el dia jueves", R.drawable.lensalada));
+        saveLead(new DatoPromo("licores", "Sede: Llanogrande", "Disponible el dia viernes", R.drawable.llicores));
 
     }
 

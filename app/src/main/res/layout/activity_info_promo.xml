@@ -6,4 +6,11 @@
     android:id="@+id/contenedor"
     tools:context="com.andresvanegas.practica3.InfoPromo">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        android:id="@+id/volver"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

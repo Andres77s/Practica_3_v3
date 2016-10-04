@@ -71,8 +71,8 @@ public class PromoFragment extends Fragment {
 
                 //lo iniciamos pasandole la intencion, con todos sus parametros guardados
                 startActivity(explicit_intent);
-                Toast.makeText(getActivity(),"Iniciar screen de detalle para: \n" + currentLead.getName(),
-                        Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getActivity(),"Iniciar screen de detalle para: \n" + currentLead.getName(),
+                 //       Toast.LENGTH_SHORT).show();
             }
         });
 

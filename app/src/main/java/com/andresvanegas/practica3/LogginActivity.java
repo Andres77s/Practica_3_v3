@@ -1,6 +1,8 @@
 package com.andresvanegas.practica3;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +19,9 @@ public class LogginActivity extends AppCompatActivity implements View.OnClickLis
     String ur,con,cr;
     String ur1="",con1="",cr1;
     Bundle extras;
+    SharedPreferences prefs;
+    SharedPreferences.Editor editor;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +49,14 @@ public class LogginActivity extends AppCompatActivity implements View.OnClickLis
                 startActivityForResult(intent, 12);
                 break;
             case R.id.bingresar:
+                prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                 if(usuario.getText().toString().isEmpty() || contrasena.getText().toString().isEmpty()) {
-                    Toast.makeText(this ,"Flatan datos",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this ,"Faltan datos",Toast.LENGTH_SHORT).show();
+                }else if(prefs.getString("usuario","02").length()==0){
+                    Toast.makeText(getApplicationContext(),"Usuario no Registrado",Toast.LENGTH_SHORT).show();
                 }
-                else if(usuario.getText().toString().equals(ur) && contrasena.getText().toString().equals(con)){
+                else if(usuario.getText().toString().equals(ur) || usuario.getText().toString().equals(prefs.getString("usuario","01"))
+                        && contrasena.getText().toString().equals(con) || contrasena.getText().toString().equals(prefs.getString("contrasena","02"))){
                     Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
                     intent1.putExtra("usuario",ur);
                     intent1.putExtra("correo",cr);
@@ -65,6 +74,8 @@ public class LogginActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 12 && resultCode == RESULT_OK) {
+            prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+            editor = prefs.edit();
             String user = data.getExtras().getString("usuario");
             String contrasena = data.getExtras().getString("contrasena");
             String correo = data.getExtras().getString("correo");

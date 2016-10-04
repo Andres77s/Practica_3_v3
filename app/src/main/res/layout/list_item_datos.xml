@@ -25,7 +25,8 @@
         android:layout_marginLeft="56dp"
         android:text="Nombre"
         android:textAppearance="?attr/textAppearanceListItem"
-        tools:text="Alexander Pierrot" />
+        tools:text="Promocion"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_title"
@@ -34,7 +35,7 @@
         android:layout_alignLeft="@+id/tv_name"
         android:layout_below="@+id/tv_name"
         android:text="Cargo"
-        tools:text="CEO" />
+        tools:text="Sede:" />
 
     <TextView
         android:id="@+id/tv_company"
@@ -42,6 +43,6 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv_name"
         android:layout_below="@+id/tv_title"
-        android:text="Compañía"
+        android:text="Dia"
         tools:text="Blue Insurances Ltd" />
 </RelativeLayout>
